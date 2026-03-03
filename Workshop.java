@@ -1,23 +1,17 @@
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 @SuppressWarnings("ALL")
 public class Workshop < T extends Car > {
     private final Storable <T> workshop;
     private final Point position;
-    private BufferedImage image;
+    private int width;
+    private int height;
 
-    public Workshop(int capacity, Point position, String imagePath) {
+    public Workshop(int capacity, Point position, int width, int height) {
         workshop = new Storable<>(capacity);
         this.position = position;
-
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream(imagePath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.width = width;
+        this.height = height;
     }
 
     public Point getPosition() {
@@ -44,14 +38,11 @@ public class Workshop < T extends Car > {
     public int getCapacity()
     {return workshop.getCapacity();}
 
-    public BufferedImage getImage(){
-        return image;
-    }
     public int getWidth() {
-        return image.getWidth();
+        return width;
     }
 
     public int getHeight() {
-       return image.getHeight();
+        return height;
     }
 }
