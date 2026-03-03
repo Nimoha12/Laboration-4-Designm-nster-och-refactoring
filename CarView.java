@@ -57,7 +57,7 @@ public class CarView extends JFrame{
     // Constructor
     public CarView(String framename, CarController cc){
         this.carC = cc;
-        drawPanel = new DrawPanel(X, Y-240,carC.cars,carC.workshops);
+        drawPanel = new DrawPanel(X, Y-240,carC);
         initComponents(framename);
     }
 
@@ -86,7 +86,7 @@ public class CarView extends JFrame{
 
 
         degreeSpinner = new JSpinner(degreeModel);
-        degreeSpinner.addChangeListener(e -> degreeAmount = (int) degreeSpinner.getValue());
+        degreeSpinner.addChangeListener(e -> degreeAmount = (double) degreeSpinner.getValue());
 
 
         gasPanel.setLayout(new BorderLayout());
