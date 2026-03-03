@@ -3,7 +3,7 @@ import java.awt.*;
 public class Scania extends Car implements Rampable{
     private double flatbedAngle;
     public Scania(){
-        super(2,1000, Color.white,"Scania","pics/Scania.jpg");
+        super(2,1000, Color.white,"Scania",100, 60 );
         this.flatbedAngle = 0.0;
     }
 
