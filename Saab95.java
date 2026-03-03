@@ -4,7 +4,7 @@ public class Saab95 extends Car implements Turboable{
     private boolean turboOn;
 
     public Saab95() {
-        super(2,125,Color.red,"Saab95","pics/Saab95.jpg");
+        super(2,125,Color.red,"Saab95", 100, 60);
         this.turboOn=false;
     }
 
