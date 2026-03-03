@@ -5,18 +5,6 @@ public class Collision {
     ArrayList<Car> cars;
     ArrayList<Workshop<Volvo240>> workshops;
 
-    //Planen var att separera kollisionsdetektering och lastning,
-    //men själva detekteringen blev så lite att en extra klass känns så onödig.
-    //Ska vi fortfarande köra med Collision + workshopService ??
-
-    // Då blir Collision typ :
-    // if (carRect.intersects(wsRect)) {workshopService.handleCollision(car,ws);
-    //Värd att ha ??
-
-    //CollisionLogic som klass känns allmänt onödig. Den detekterar bara och anropar metoder.
-    //Behövs den ens??
-
-
     public Collision(ArrayList<Car> cars, ArrayList<Workshop<Volvo240>> workshops){
         this.cars = cars;
         this.workshops = workshops;
